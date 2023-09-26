@@ -5,8 +5,9 @@ import SearchEngine from "./SearchEngine";
 function App() {
   return (
     <div className="App">
-      <h1 className="mt-5">My React Weather App</h1>
-      <SearchEngine />
+      <div className="wrapper">
+        <SearchEngine />
+      </div>
     </div>
   );
 }

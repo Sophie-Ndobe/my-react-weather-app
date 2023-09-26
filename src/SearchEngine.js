@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SearchEngine.css";
+import WeatherCondition from "./WeatherCondition";
 
 export default function SearchEngine() {
   const [city, setCity] = useState(" ");
@@ -19,6 +20,7 @@ export default function SearchEngine() {
         <button className="btn btn-primary mb-1">Search</button>
         <button className="btn btn-success ms-2 mb-1">Current</button>
       </form>
+      <WeatherCondition />
     </div>
   );
 }

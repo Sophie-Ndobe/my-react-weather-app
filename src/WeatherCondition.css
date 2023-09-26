@@ -1,0 +1,18 @@
+.WeatherCondition h2 {
+  font-size: 60px;
+}
+
+.WeatherCondition ul {
+  list-style: none;
+  padding: 0;
+}
+.WeatherCondition img {
+  width: 80px;
+}
+
+.WeatherCondition .Units {
+  position: relative;
+  top: 8px;
+  font-weight: 600;
+  font-size: 30px;
+}
