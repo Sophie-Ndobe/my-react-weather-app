@@ -1,0 +1,7 @@
+.Cities a {
+  text-decoration: none;
+}
+
+.Cities a:hover {
+  text-decoration: underline;
+}
