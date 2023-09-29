@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./WeatherCondition.css";
 
-export default function WeatherCondition() {
+export default function WeatherCondition(props) {
   return (
     <div className="WeatherCondition">
-      <h1>Lisbon</h1>
+      <h1>{props.city}Lisbon</h1>
       <ul>
         <li>Tuesday 13:19</li>
-        <li>Clear</li>
+        <li>{props.description}Clear</li>
       </ul>
       <div className="row">
         <div className="col">
@@ -16,14 +16,14 @@ export default function WeatherCondition() {
               src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
               className="me-2"
             ></img>
-            <h2>27</h2>
+            <h2>{props.temp}27</h2>
             <span className="Units">°C</span>
           </div>
         </div>
         <div className="col">
           <ul>
-            <li>Humidity: 60%</li>
-            <li>Wind: 6km/h</li>
+            <li>Humidity: {props.humidity} 60%</li>
+            <li>Wind: {props.wind} 6km/h</li>
           </ul>
         </div>
       </div>
