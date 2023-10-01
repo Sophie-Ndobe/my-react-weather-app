@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-        <SearchEngine />
+        <SearchEngine loadCity="Pretoria" />
       </div>
     </div>
   );

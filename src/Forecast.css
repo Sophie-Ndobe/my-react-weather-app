@@ -1,0 +1,8 @@
+.Forecast p {
+  text-align: center;
+}
+
+.Forecast img {
+  display: block;
+  margin: auto;
+}

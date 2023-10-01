@@ -25,8 +25,12 @@ export default function WeatherCondition(props) {
         </div>
         <div className="col">
           <ul>
-            <li>Humidity: {props.humidity} 60%</li>
-            <li>Wind: {props.wind} 6km/h</li>
+            <li>
+              Humidity: <strong>{props.humidity}</strong>60%
+            </li>
+            <li>
+              Wind: <strong>{props.wind}</strong>6km/h
+            </li>
           </ul>
         </div>
       </div>
