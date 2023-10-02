@@ -20,21 +20,11 @@ export default function SearchEngine(props) {
     });
   }
 
-  function displayForecast(response) {
-    setForecast({
-      time: response.data.daily[0].time,
-      temperature: Math.round(response.data.daily[0].temperature.time),
-    });
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
     let apiKey = "2c13e0a2b6fe347b0421bb02eef2o43t";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
-
-    let forecastApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-    axios.get(forecastApiUrl).then(displayForecast);
   }
 
   function updateCity(event) {
@@ -56,7 +46,7 @@ export default function SearchEngine(props) {
         description={weather.description}
         city={weather.city}
       />
-      <Forecast time={forecast.time} temperature={forecast.temperature} />
+      <Forecast city={city} />
     </div>
   );
 }

@@ -1,8 +1,6 @@
 import React from "react";
 
-import Forecast from "./Forecast";
-
-export default function DateUpdate(props) {
+export default function DateUpdate() {
   let date = new Date();
 
   let hours = date.getHours();
@@ -29,18 +27,9 @@ export default function DateUpdate(props) {
 
   let day = days[date.getDay()];
 
-  function forecastDayUpdate() {
-    let forecastDate = new Date(props.time * 1000);
-    let forecastDay = forecastDate.getDay();
-    let forecastDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-    return forecastDays[forecastDay];
-  }
-
   return (
     <div className="DateUpdate">
       {day} {hours}:{minutes}
-      <Forecast day={forecastDayUpdate()} />
     </div>
   );
 }
