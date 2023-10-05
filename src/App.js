@@ -1,12 +1,14 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SearchEngine from "./SearchEngine";
+import Search from "./Search";
 
 function App() {
   return (
     <div className="App">
       <div className="wrapper">
-        <SearchEngine loadCity="Pretoria" />
+        <Search />
+        <SearchEngine city=" " />
       </div>
     </div>
   );

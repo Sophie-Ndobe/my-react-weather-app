@@ -5,10 +5,10 @@ import WeatherCondition from "./WeatherCondition";
 import Cities from "./Cities";
 import Forecast from "./Forecast";
 
-export default function SearchEngine(props) {
-  const [city, setCity] = useState(props.loadCity);
+export default function SearchEngine() {
+  const [city, setCity] = useState(" ");
   const [weather, setWeather] = useState(" ");
-  const [forecast, setForecast] = useState(" ");
+  
 
   function displayWeather(response) {
     setWeather({
@@ -46,7 +46,7 @@ export default function SearchEngine(props) {
         description={weather.description}
         city={weather.city}
       />
-      <Forecast city={city} />
+  
     </div>
   );
 }
